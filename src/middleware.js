@@ -20,9 +20,9 @@ module.exports = config => {
       debug('Sending message to Rasa', message.text)
       const options = {
         method: 'POST',
-        uri: `${config.rasa_uri}/parse`,
+        uri: `${config.rasa_uri}/model/parse`,
         body: {
-          q: message.text
+          text: message.text
         },
         json: true
       }
